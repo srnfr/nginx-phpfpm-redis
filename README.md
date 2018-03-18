@@ -1,6 +1,6 @@
 # nginx-phpfpm-redis
 
-Docker image based on php-php-fpm by richarvey, but with the following additionsa
+Docker image based on php-php-fpm by richarvey, but with the following additions
 - redis client PHP lib
 - tzdata
 - nfs client

@@ -22,3 +22,5 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 ##Debug
 ##ADD t.php /var/www/html/
 ADD /ver.txt /etc/
+
+ADD VERSION .
