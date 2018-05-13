@@ -6,4 +6,4 @@ set -ex
 USERNAME=reytans
 # image name
 IMAGE=nginx-phpfpm-redis
-docker build -t $USERNAME/$IMAGE:latest .
+docker build --build-arg=token=MTRkZjZiOGJkNzlh -t $USERNAME/$IMAGE:latest --no-cache .
