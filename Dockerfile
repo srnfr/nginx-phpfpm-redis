@@ -8,7 +8,7 @@ RUN apk add --no-cache --update \
 ##  php7-redis \
     autoconf git g++ make \
     nfs-utils \
-    tzdata \
+  && apk add -U tzdata \
   && pecl install redis \
   && docker-php-ext-enable redis \
   && rm -fr /var/cache/apk/*
@@ -19,7 +19,7 @@ ADD www.conf /usr/local/etc/php-fpm.d/
 RUN rm -f /var/log/nginx/access.log
 RUN rm -f /var/log/nginx/error.log
 
-ENV TZ=Europe/Paris
+ENV TZ Europe/Paris
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 #RUN apk add --no-cache ca-certificates && update-ca-certificates
