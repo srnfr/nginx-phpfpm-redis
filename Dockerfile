@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 ## Build 3.1.8 => FROM richarvey/nginx-php-fpm:1.5.1
 ## Build 3.1.7 => FROM richarvey/nginx-php-fpm:1.5.7
 ## FROM richarvey/nginx-php-fpm:latest
 FROM richarvey/nginx-php-fpm:1.5.7
 
 ###
+=======
+FROM richarvey/nginx-php-fpm:1.5.1
+##FROM richarvey/nginx-php-fpm:latest
+>>>>>>> a17c5866bbeb521874bc39799f3d6ff5af6e7160
 
 RUN apk add --no-cache --update \
     redis \
