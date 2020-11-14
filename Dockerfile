@@ -1,8 +1,9 @@
 ## Build 3.1.8 => FROM richarvey/nginx-php-fpm:1.5.1
 ## Build 3.1.7 => FROM richarvey/nginx-php-fpm:1.5.7
 ## Build 4.6.8 => FROM richarvey/nginx-php-fpm:1.6.8
+## Build 4.7.4 => FROM richarvey/nginx-php-fpm:1.7.4
 ## FROM richarvey/nginx-php-fpm:latest
-FROM richarvey/nginx-php-fpm:1.6.8
+FROM richarvey/nginx-php-fpm:1.7.4
 
 ##cf https://gitlab.com/ric_harvey/nginx-php-fpm/-/blob/master/docs/versioning.md
 
