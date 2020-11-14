@@ -30,19 +30,11 @@ RUN rm -f /var/log/nginx/error.log
 ENV TZ Europe/Paris
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-<<<<<<< HEAD
 ##RUN apk add --no-cache ca-certificates && update-ca-certificates
 ##ADD https://get.aquasec.com/microscanner .
 ##RUN chmod +x microscanner
 ##ARG token
 ##RUN ./microscanner ${token} --continue-on-failure
-=======
-#RUN apk add --no-cache ca-certificates && update-ca-certificates
-#ADD https://get.aquasec.com/microscanner .
-#RUN chmod +x microscanner
-#ARG token
-#RUN ./microscanner ${token} --continue-on-failure
->>>>>>> c50ad6bec0bed8d7814f428443ce4714e58f58a5
 
 ##Debug
 ##ADD t.php /var/www/html/
