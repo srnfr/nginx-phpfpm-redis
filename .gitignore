@@ -1,2 +1,4 @@
 t.php
 docker-compose.yml
+*.txt
+!ver.txt
