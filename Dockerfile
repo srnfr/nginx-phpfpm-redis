@@ -5,8 +5,9 @@
 ## Build 4.8.2 => FROM richarvey/nginx-php-fpm:1.8.2
 ## Build 4.9.1 => FROM richarvey/nginx-php-fpm:1.9.1
 ## Build 4.10.4 => FROM richarvey/nginx-php-fpm:1.10.4
+## Build 5.0 => FROM richarvey/nginx-php-fpm:2.1.2
 ## FROM richarvey/nginx-php-fpm:latest
-FROM richarvey/nginx-php-fpm:1.10.4
+FROM richarvey/nginx-php-fpm:2.1.2
 
 ##cf https://gitlab.com/ric_harvey/nginx-php-fpm/-/blob/master/docs/versioning.md
 
