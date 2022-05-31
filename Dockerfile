@@ -15,11 +15,11 @@ RUN apk add --no-cache --update \
     redis \
 ##  php7-redis \
     autoconf git g++ make \
-    nfs-utils \
-  && apk add -U tzdata \
-  && pecl install redis \
-  && docker-php-ext-enable redis \
-  && rm -fr /var/cache/apk/*
+    nfs-utils 
+RUN apk add -U tzdata 
+## Deja installe RUN pecl install redis 
+RUN docker-php-ext-enable redis 
+RUN rm -fr /var/cache/apk/*
 
 ADD docker-vars.ini /usr/local/etc/php/conf.d/
 ADD www.conf /usr/local/etc/php-fpm.d/
