@@ -6,4 +6,4 @@ Docker image based on nginx-php-fpm by richarvey, but with the following additio
 - nfs client
 
 
-This image aimed to be used in large-scale Kubernetes-driven Wordpress elatic architecture.
+This image was aimed to be used in large-scale Kubernetes-driven Wordpress elastic architecture.
