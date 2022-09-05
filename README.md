@@ -18,3 +18,4 @@ Some notes on versions :
 * Build 4.9.1 => FROM richarvey/nginx-php-fpm:1.9.1
 * Build 4.10.4 => FROM richarvey/nginx-php-fpm:1.10.4
 * Build 5.0 => FROM richarvey/nginx-php-fpm:2.1.2
+* Build 5.1 => Fixed comments that were raising snyk alerts
