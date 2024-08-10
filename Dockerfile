@@ -7,8 +7,6 @@ RUN apk add --no-cache --update \
     nfs-utils \
     && apk add -U tzdata \
     && rm -fr /var/cache/apk/*
-## Deja installe RUN pecl install redis 
-## Deja installe  RUN docker-php-ext-enable redis 
 
 ADD docker-vars.ini /usr/local/etc/php/conf.d/
 ADD www.conf /usr/local/etc/php-fpm.d/
@@ -21,8 +19,3 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN cd /root \
    && wget https://github.com/DataDog/dd-trace-php/releases/latest/download/datadog-setup.php \
    && php datadog-setup.php --php-bin=all
-   
-
-ADD /ver.txt /etc/
-
-ADD VERSION .
