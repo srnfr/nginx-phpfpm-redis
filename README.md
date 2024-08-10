@@ -19,3 +19,5 @@ Some notes on versions :
 * Build 4.10.4 => FROM richarvey/nginx-php-fpm:1.10.4
 * Build 5.0 => FROM richarvey/nginx-php-fpm:2.1.2
 * Build 5.1 => Fixed comments that were raising snyk alerts
+
+* Build 6.0 => Same as 3.1.8 + Datadog Tracing

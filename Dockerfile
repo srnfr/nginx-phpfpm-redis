@@ -1,10 +1,8 @@
-FROM richarvey/nginx-php-fpm:2.1.2
-
+FROM richarvey/nginx-php-fpm:1.5.7
 ##cf https://gitlab.com/ric_harvey/nginx-php-fpm/-/blob/master/docs/versioning.md
 
 RUN apk add --no-cache --update \
     redis \
-##  php7-redis \
     autoconf git g++ make \
     nfs-utils \
     && apk add -U tzdata \
@@ -20,14 +18,11 @@ RUN rm -f /var/log/nginx/access.log /var/log/nginx/error.log
 ENV TZ Europe/Paris
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-##RUN apk add --no-cache ca-certificates && update-ca-certificates
-##ADD https://get.aquasec.com/microscanner .
-##RUN chmod +x microscanner
-##ARG token
-##RUN ./microscanner ${token} --continue-on-failure
+RUN cd /root \
+   && wget https://github.com/DataDog/dd-trace-php/releases/latest/download/datadog-setup.php \
+   && php datadog-setup.php --php-bin=all
+   
 
-##Debug
-##ADD t.php /var/www/html/
 ADD /ver.txt /etc/
 
 ADD VERSION .
