@@ -20,4 +20,4 @@ Some notes on versions :
 * Build 5.0 => FROM richarvey/nginx-php-fpm:2.1.2
 * Build 5.1 => Fixed comments that were raising snyk alerts
 
-* Build 6.0 => Same as 3.1.8 + Datadog Tracing
+* Build 5.3 => Same as 3.1.7 + Datadog Tracing - Local build
