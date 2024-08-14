@@ -1,12 +1,12 @@
 FROM richarvey/nginx-php-fpm:1.5.7
 ##cf https://gitlab.com/ric_harvey/nginx-php-fpm/-/blob/master/docs/versioning.md
 
-RUN apk add --no-cache --update \
-    redis \
-    autoconf git g++ make \
-    nfs-utils \
-    && apk add -U tzdata \
-    && rm -fr /var/cache/apk/*
+## Redis included in parent image
+#RUN apk add --no-cache --update \
+#    autoconf git g++ make \
+#    nfs-utils \
+#    && apk add -U tzdata \
+#    && rm -fr /var/cache/apk/*
 
 ADD docker-vars.ini /usr/local/etc/php/conf.d/
 ADD www.conf /usr/local/etc/php-fpm.d/
