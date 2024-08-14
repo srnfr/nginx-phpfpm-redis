@@ -1,4 +1,4 @@
-FROM richarvey/nginx-php-fpm:1.5.7
+FROM richarvey/nginx-php-fpm:3.1.6
 ##cf https://gitlab.com/ric_harvey/nginx-php-fpm/-/blob/master/docs/versioning.md
 
 ## Redis included in parent image
